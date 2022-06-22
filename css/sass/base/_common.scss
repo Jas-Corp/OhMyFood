@@ -1,0 +1,42 @@
+// LOGO
+.logo {
+  font-size: 40px;
+  &--little {
+    font-size: 20px;
+    color: white;
+  }
+}
+
+// TITRE ET SOUS TITRE
+.title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 27px;
+  &--center {
+    text-align: center;
+  }
+}
+.subtitle {
+  color: $grey;
+  margin-top: 15px;
+  &--center {
+    text-align: center;
+  }
+}
+//FOND
+.section {
+  padding: 20px;
+
+  &--dark-background {
+    background-color: $background;
+  }
+}
+//BOUTTON
+.global__button {
+  border-radius: 90px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(180deg, $secondaire, $priamire 100%);
+  padding: 15px;
+}

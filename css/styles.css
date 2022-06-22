@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.operation_stape_content i, .localisation, .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+}
+
 html,
 body,
 p,
@@ -75,6 +86,146 @@ table {
 td,
 th {
   padding: 0;
+}
+
+.logo {
+  font-family: "Shrikhand", sans-serif;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  font-size: 40px;
+}
+.logo--little {
+  font-size: 20px;
+  color: white;
+}
+
+.title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 27px;
+}
+.title--center {
+  text-align: center;
+}
+
+.subtitle {
+  color: #353535;
+  margin-top: 15px;
+}
+.subtitle--center {
+  text-align: center;
+}
+
+.section {
+  padding: 20px;
+}
+.section--dark-background {
+  background-color: #f6f6f6;
+}
+
+.global__button {
+  border-radius: 90px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(180deg, #ff79da, #9356dc 100%);
+  padding: 15px;
+}
+
+.header {
+  padding: 10px;
+}
+
+.localisation {
+  background-color: #eaeaea;
+  box-shadow: inset 0px 2px 7px 0px #d8dede;
+  color: #353535;
+}
+.localisation__text {
+  font-weight: 600;
+}
+.localisation__ico {
+  margin-right: 15px;
+}
+
+.presentation__button {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.operation_stape_content {
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+  color: black;
+  font-weight: 800;
+}
+
+.operation_stape_content i {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.operation_stape_content i::before {
+  color: #7e7e7e;
+}
+
+.operation__stape {
+  background-color: #f6f6f6;
+  margin: 10px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2745098039);
+  color: #7e7e7e;
+}
+.operation__stape:nth-child(1)::before {
+  content: "1";
+  display: inline-block;
+  position: absolute;
+  background-color: #9356dc;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  left: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.operation__stape:nth-child(2)::before {
+  content: "2";
+  display: inline-block;
+  position: absolute;
+  background-color: #9356dc;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  left: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.operation__stape:nth-child(3)::before {
+  content: "3";
+  display: inline-block;
+  position: absolute;
+  background-color: #9356dc;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  left: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

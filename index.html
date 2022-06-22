@@ -7,36 +7,68 @@
 
     <title>Oh my food</title>
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Fontawesome -->
+    <link
+      href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"
+      media="all"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
+    <!-- Entête -->
+    <header class="header">
       <h1 class="logo">ohmyfood</h1>
     </header>
 
     <main>
-      <div class="localisation">
-        <p class="localisation_text">Paris, Belleville</p>
+      <!-- localisation -->
+      <div class="localisation section">
+        <i class="fas fa-map-marker-alt localisation__ico"></i> Paris,
+        Belleville
+        <p class="localisation__text"></p>
       </div>
 
-      <section class="section">
-        <h2 class="section__title">Réservez le menu qui vous convient</h2>
-        <p class="section__subtitle">
-          Découvrez nos restaurants d'éxception, séléctionnés par nos soins
+      <!-- Presentation -->
+      <section class="presentation section section--dark-background">
+        <h2 class="title title--center">
+          Réservez le menu qui <br />
+          vous convient
+        </h2>
+        <p class="subtitle subtitle--center">
+          Découvrez nos restaurants d'éxception,<br />
+          séléctionnés par nos soins.
         </p>
-        <button class="section__button"></button>
+        <button class="presentation__button global__button">
+          Explorer nos restaurants
+        </button>
       </section>
 
-      <section class="section">
-        <h2 class="section__title">Fonctionnement</h2>
-        <div class="section__content">
-          <ul class="section__stapes">
-            <li class="section__stape">Choisissez un restaurant</li>
-            <li class="section__stape">Composez votre menu</li>
-            <li class="section__stape">Dégustez au restaurent</li>
+      <!-- Fonctionnement -->
+      <section class="operation section">
+        <h2 class="title">Fonctionnement</h2>
+        <div class="operation__content">
+          <ul class="operation__stapes">
+            <li class="operation__stape">
+              <div class="operation_stape_content">
+                <i class="fas fa-mobile-alt"></i>Choisissez un restaurant
+              </div>
+            </li>
+            <li class="operation__stape">
+              <div class="operation_stape_content">
+                <i class="fas fa-list-ul"></i>Composez votre menu
+              </div>
+            </li>
+            <li class="operation__stape">
+              <div class="operation_stape_content">
+                <i class="fas fa-store"></i>Dégustez au restaurent
+              </div>
+            </li>
           </ul>
         </div>
       </section>
 
+      <!-- Restaurants -->
       <section class="section">
         <h2 class="section__title">Restaurants</h2>
         <div class="section__content">
@@ -81,13 +113,14 @@
         </div>
       </section>
 
+      <!-- Footers -->
       <footer>
-        <h4 class="logo logo--petit">ohmyfood</h4>
+        <h4 class="logo logo--little">ohmyfood</h4>
         <ul>
-            <li>Proposer un restaurant</li>
-            <li>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+          <li>Proposer un restaurant</li>
+          <li>Devenir partenaire</li>
+          <li>Mentions légales</li>
+          <li>Contact</li>
         </ul>
       </footer>
     </main>
