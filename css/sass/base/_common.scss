@@ -40,3 +40,10 @@
   background: linear-gradient(180deg, $secondaire, $priamire 100%);
   padding: 15px;
 }
+
+// ICON COLOR
+.icon {
+  &--grey::before {
+    color: $light-grey;
+  }
+}

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.operation_stape_content i, .localisation, .header {
+.operation__content i, .operation__stape, .localisation, .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,6 +137,10 @@ main {
   padding: 15px;
 }
 
+.icon--grey::before {
+  color: #7e7e7e;
+}
+
 .header {
   padding: 10px;
 }
@@ -159,44 +163,24 @@ main {
   margin-right: auto;
 }
 
-.operation_stape_content {
-  margin-left: 20px;
-  width: 100%;
-  display: flex;
-  color: black;
-  font-weight: 800;
-}
-
-.operation_stape_content i {
-  margin-right: 10px;
-  height: 20px;
-  width: 20px;
-}
-
-.operation_stape_content i::before {
-  color: #7e7e7e;
-}
-
 .operation__stape {
-  background-color: #f6f6f6;
-  margin: 10px;
-  padding: 1.5rem;
-  border-radius: 10px;
   position: relative;
-  display: flex;
-  align-items: center;
+  margin: 10px;
+  padding: 25px;
+  border-radius: 10px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2745098039);
-  color: #7e7e7e;
+  background-color: #f6f6f6;
 }
 .operation__stape:nth-child(1)::before {
   content: "1";
   display: inline-block;
   position: absolute;
-  background-color: #9356dc;
-  border-radius: 100%;
   width: 30px;
   height: 30px;
   left: -5px;
+  border-radius: 100%;
+  color: white;
+  background-color: #9356dc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,11 +189,12 @@ main {
   content: "2";
   display: inline-block;
   position: absolute;
-  background-color: #9356dc;
-  border-radius: 100%;
   width: 30px;
   height: 30px;
   left: -5px;
+  border-radius: 100%;
+  color: white;
+  background-color: #9356dc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,14 +203,27 @@ main {
   content: "3";
   display: inline-block;
   position: absolute;
-  background-color: #9356dc;
-  border-radius: 100%;
   width: 30px;
   height: 30px;
   left: -5px;
+  border-radius: 100%;
+  color: white;
+  background-color: #9356dc;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.operation__content {
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+  color: black;
+  font-weight: 800;
+}
+.operation__content i {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
