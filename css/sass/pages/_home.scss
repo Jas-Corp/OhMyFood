@@ -5,6 +5,7 @@
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 7px 0px #d8dede;
   color: $grey;
+
   &__text {
     font-weight: 600;
   }
@@ -18,6 +19,7 @@
   @extend %flex-column;
 
   width: 100%;
+
   &__button {
     margin-top: 20px;
     margin-left: auto;
@@ -29,15 +31,28 @@
 // FONCTIONNEMENT
 .operation {
   // ETAPE
+  @include computer {
+    text-align: center;
+  }
   &__stapes {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include computer {
+      justify-content: center;
+      flex-direction: row;
+    }
   }
   &__stape {
     @extend %flex-center;
     position: relative;
+    width: 80%;
+    max-width: 470px;
+    min-width: 300px;
 
     margin: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
 
     padding: 23px;
     border-radius: 20px;
@@ -45,6 +60,13 @@
     box-shadow: 1px 1px 10px 1px #00000046;
     background-color: $background;
 
+    &:last-child{
+
+      @include computer {
+        margin-bottom: 3px;
+
+      }
+    }
     @for $i from 1 to 4 {
       &:nth-child(#{$i})::before {
         content: "#{$i}";
@@ -83,16 +105,26 @@
 .restaurant {
   &__title {
     margin-top: 30px;
+    @include computer {
+      text-align: center;
+    }
   }
   &__cards {
     @extend %flex-center;
     flex-direction: column;
     margin-top: 10px;
+    @include tablette {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include computer {
+      margin: 100px;
+    }
   }
   &__card {
     border-radius: 15px;
     height: 250px;
-    width: 320px;
+    min-width: 320px;
     margin: 10px;
     background-color: white;
     box-shadow: 1px 1px 10px 1px #00000046;
@@ -116,23 +148,54 @@
       height: 75%;
       border-radius: 15px 15px 0px 0px;
       object-position: 50% 60%;
-      &::after {
-        content: "Nouveau";
-        display: inline;
-        position: relative;
-        width: 100px;
-        height: 100px;
-        background-color: black;
+      transition: height 0.2s;
+
+      &:hover {
+        height: 70%;
       }
     }
     &__content {
       padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     &__title {
       font-weight: 800;
       margin-bottom: 3px;
     }
+
+    &__heart::before {
+      font-size: 25px;
+      font-weight: 500;
+      transition: 0.2s;
+      color: transparent;
+      animation: heart-stroke-appearing 0.5s forwards;
+      transition: 1s ease-in;
+    }
+    &__heart:hover::before {
+      animation: heart-background-fill 0.5s forwards;
+      font-weight: bold;
+      background: linear-gradient(360deg, #ff79da, #9356dc, #ffffff);
+      background-size: 200% 200%;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      transition: 0.2s;
+    }
   }
 }
 
-
+@keyframes heart-background-fill {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes heart-stroke-appearing {
+  100% {
+    font-weight: 500;
+    color: black;
+  }
+}

@@ -2,9 +2,19 @@
   background-color: $grey;
   padding: 20px 0px 30px 20px;
   color: white;
+
+  @include tablette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__link {
     margin-top: 10px;
 
+    &:hover {
+      text-decoration: underline;
+    }
     &--thin {
       font-weight: 300;
     }

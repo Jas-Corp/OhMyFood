@@ -1,5 +1,17 @@
-@mixin flex-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// BREAKPOINTS
+@mixin tablette {
+  @media (min-width: map-get($breakpoints, "tablette")) {
+    @content;
+  }
+}
+@mixin computer {
+  @media (min-width: map-get($breakpoints, "computer")) {
+    @content;
+  }
 }

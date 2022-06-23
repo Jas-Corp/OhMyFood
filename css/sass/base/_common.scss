@@ -16,6 +16,9 @@
   &--center {
     text-align: center;
   }
+  @include computer{
+    font-size: 30px;
+  }
 }
 .subtitle {
   color: $grey;
@@ -38,10 +41,17 @@
   border: none;
   color: white;
   font-weight: 700;
-  background: $gradient;
+
+  background-image: $gradient;
   padding: 15px;
   box-shadow: 1px 1px 10px 1px #00000046;
+  transition: 0.3s;
 
+  &:hover {
+    filter: brightness(110%);
+
+    box-shadow: 5px 5px 10px 2px #00000046;
+  }
 }
 
 // ICON COLOR
