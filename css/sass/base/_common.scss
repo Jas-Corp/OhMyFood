@@ -1,17 +1,18 @@
 // LOGO
 .logo {
-  font-size: 40px;
+  font-size: 30px;
   &--little {
-    font-size: 20px;
+    font-size: 17px;
+    margin-bottom: 20px;
     color: white;
   }
 }
 
 // TITRE ET SOUS TITRE
 .title {
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
-  font-size: 27px;
+  font-size: 23px;
   &--center {
     text-align: center;
   }
@@ -37,8 +38,10 @@
   border: none;
   color: white;
   font-weight: 700;
-  background: linear-gradient(180deg, $secondaire, $priamire 100%);
+  background: $gradient;
   padding: 15px;
+  box-shadow: 1px 1px 10px 1px #00000046;
+
 }
 
 // ICON COLOR

@@ -42,6 +42,7 @@
         <button class="presentation__button global__button">
           Explorer nos restaurants
         </button>
+
       </section>
 
       <!-- Fonctionnement -->
@@ -69,58 +70,70 @@
       </section>
 
       <!-- Restaurants -->
-      <section class="section">
-        <h2 class="section__title">Restaurants</h2>
-        <div class="section__content">
-          <div class="section__cards">
-            <article class="card">
-              <img
-                src="./resources/images/restaurants/palette-du-gout.jpg"
-                alt="image d'un plat"
-                class="card__img"
-              />
-              <h3 class="card__title">La palette du goût</h3>
-              <p class="card__loc">Ménilmontant</p>
-            </article>
-            <article class="card">
-              <img
-                src="./resources/images/restaurants/la-note-enchantee.jpg"
-                alt="image d'un plat"
-                class="card__img"
-              />
-              <h3 class="card__title">La note enchantée</h3>
-              <p class="card__loc">Charonne</p>
-            </article>
-            <article class="card">
-              <img
-                src="./resources/images/restaurants/francaise.jpg"
-                alt="image d'un plat"
-                class="card__img"
-              />
-              <h3 class="card__title">A la francaise</h3>
-              <p class="card__loc">Cité rouget</p>
-            </article>
-            <article class="card">
-              <img
-                src="./resources/images/restaurants/delice-des-sens.jpg"
-                alt="image d'un plat"
-                class="card__img"
-              />
-              <h3 class="card__title">Le décile des sens</h3>
-              <p class="card__loc">Folie-Méricourt</p>
-            </article>
-          </div>
+      <section class="restaurant section section--dark-background">
+        <h2 class="restaurant__title title">Restaurants</h2>
+
+        <div class="restaurant__cards">
+          <article class="restaurant__card">
+            <img
+              src="./resources/images/restaurants/palette-du-gout.jpg"
+              alt="image d'un plat"
+              class="restaurant__card__img"
+            />
+            <span class="restaurant__card__new">Nouveau</span>
+            <div class="restaurant__card__content">
+              <h3 class="restaurant__card__title">La palette du goût</h3>
+              <p class="restaurant__card__loc">Ménilmontant</p>
+              <i class="far fa-heart TEST"></i>
+            </div>
+
+          </article>
+          <article class="restaurant__card">
+            <img
+              src="./resources/images/restaurants/la-note-enchantee.jpg"
+              alt="image d'un plat"
+              class="restaurant__card__img"
+            />
+            <span class="restaurant__card__new">Nouveau</span>
+            <div class="restaurant__card__content">
+              <h3 class="restaurant__card__title">La note enchantée</h3>
+              <p class="restaurant__card__loc">Charonne</p>
+            </div>
+          </article>
+          <article class="restaurant__card">
+            <img
+              src="./resources/images/restaurants/francaise.jpg"
+              alt="image d'un plat"
+              class="restaurant__card__img"
+            />
+            <div class="restaurant__card__content">
+              <h3 class="restaurant__card__title">A la francaise</h3>
+              <p class="restaurant__card__loc">Cité rouget</p>
+            </div>
+          </article>
+          <article class="restaurant__card">
+            <img
+              src="./resources/images/restaurants/delice-des-sens.jpg"
+              alt="image d'un plat"
+              class="restaurant__card__img"
+            />
+
+            <div class="restaurant__card__content">
+              <h3 class="restaurant__card__title">Le décile des sens</h3>
+              <p class="restaurant__card__loc">Folie-Méricourt</p>
+            </div>
+          </article>
         </div>
       </section>
 
       <!-- Footers -->
-      <footer>
+      <footer class="footer">
         <h4 class="logo logo--little">ohmyfood</h4>
         <ul>
-          <li>Proposer un restaurant</li>
-          <li>Devenir partenaire</li>
-          <li>Mentions légales</li>
-          <li>Contact</li>
+          <li class="footer__link"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+          <li class="footer__link"><i class="fas fa-hands-helping"></i></i>Devenir partenaire</li>
+          <li class="footer__link footer__link--thin">Mentions légales</li>
+          <li class="footer__link footer__link--thin">Contact</li>
         </ul>
       </footer>
     </main>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.operation__content i, .operation__stape, .localisation, .header {
+.restaurant__cards, .operation__content i, .operation__stape, .localisation, .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,17 +97,18 @@ main {
 }
 
 .logo {
-  font-size: 40px;
+  font-size: 30px;
 }
 .logo--little {
-  font-size: 20px;
+  font-size: 17px;
+  margin-bottom: 20px;
   color: white;
 }
 
 .title {
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
-  font-size: 27px;
+  font-size: 23px;
 }
 .title--center {
   text-align: center;
@@ -135,6 +136,7 @@ main {
   font-weight: 700;
   background: linear-gradient(180deg, #ff79da, #9356dc 100%);
   padding: 15px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2745098039);
 }
 
 .icon--grey::before {
@@ -143,6 +145,23 @@ main {
 
 .header {
   padding: 10px;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 20px 0px 30px 20px;
+  color: white;
+}
+.footer__link {
+  margin-top: 10px;
+}
+.footer__link--thin {
+  font-weight: 300;
+}
+.footer__link i {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
 }
 
 .localisation {
@@ -157,17 +176,25 @@ main {
   margin-right: 15px;
 }
 
+.presentation {
+  width: 100%;
+}
 .presentation__button {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
+.operation__stapes {
+  margin-top: 30px;
+}
 .operation__stape {
   position: relative;
-  margin: 10px;
-  padding: 25px;
-  border-radius: 10px;
+  margin: 20px;
+  margin-bottom: 25px;
+  padding: 23px;
+  border-radius: 20px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2745098039);
   background-color: #f6f6f6;
 }
@@ -177,7 +204,7 @@ main {
   position: absolute;
   width: 30px;
   height: 30px;
-  left: -5px;
+  left: -15px;
   border-radius: 100%;
   color: white;
   background-color: #9356dc;
@@ -191,7 +218,7 @@ main {
   position: absolute;
   width: 30px;
   height: 30px;
-  left: -5px;
+  left: -15px;
   border-radius: 100%;
   color: white;
   background-color: #9356dc;
@@ -205,7 +232,7 @@ main {
   position: absolute;
   width: 30px;
   height: 30px;
-  left: -5px;
+  left: -15px;
   border-radius: 100%;
   color: white;
   background-color: #9356dc;
@@ -214,7 +241,7 @@ main {
   justify-content: center;
 }
 .operation__content {
-  margin-left: 20px;
+  margin-left: 10px;
   width: 100%;
   display: flex;
   color: black;
@@ -224,6 +251,56 @@ main {
   margin-right: 10px;
   height: 20px;
   width: 20px;
+}
+
+.restaurant__title {
+  margin-top: 30px;
+}
+.restaurant__cards {
+  flex-direction: column;
+  margin-top: 10px;
+}
+.restaurant__card {
+  border-radius: 15px;
+  height: 250px;
+  width: 320px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2745098039);
+  position: relative;
+}
+.restaurant__card__new {
+  top: 10px;
+  right: 9px;
+  padding: 6px 10px;
+  position: absolute;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 3px;
+  color: #008766;
+  background-color: #99e2d0;
+}
+.restaurant__card__img {
+  object-fit: cover;
+  width: 100%;
+  height: 75%;
+  border-radius: 15px 15px 0px 0px;
+  object-position: 50% 60%;
+}
+.restaurant__card__img::after {
+  content: "Nouveau";
+  display: inline;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+.restaurant__card__content {
+  padding: 10px;
+}
+.restaurant__card__title {
+  font-weight: 800;
+  margin-bottom: 3px;
 }
 
 /*# sourceMappingURL=styles.css.map */
