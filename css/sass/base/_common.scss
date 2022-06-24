@@ -16,7 +16,7 @@
   &--center {
     text-align: center;
   }
-  @include computer{
+  @include computer {
     font-size: 30px;
   }
 }
@@ -35,8 +35,19 @@
     background-color: $background;
   }
 }
+
+// ICON COLOR
+.icon {
+  &--grey::before {
+    color: $light-grey;
+  }
+  &--white::before {
+    color: white;
+  }
+}
+
 //BOUTTON
-.global__button {
+@mixin global-button {
   border-radius: 90px;
   border: none;
   color: white;
@@ -51,12 +62,5 @@
     filter: brightness(110%);
 
     box-shadow: 5px 5px 10px 2px #00000046;
-  }
-}
-
-// ICON COLOR
-.icon {
-  &--grey::before {
-    color: $light-grey;
   }
 }
