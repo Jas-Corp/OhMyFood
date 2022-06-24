@@ -1,10 +1,27 @@
 .menu {
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 30px 30px 0px 0px;
   background-color: $background;
   position: relative;
   margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include computer {
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
+  &__entrees {
+    width: 100%;
+  }
+  &__plats {
+    width: 100%;
+  }
+  &__deserts {
+    width: 100%;
+  }
   &__img {
     max-height: 400px;
     width: 100%;
@@ -14,6 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 
   &__categorie {
@@ -33,19 +51,15 @@
     }
   }
 
-  &__entrees {
-    max-height: 287px;
-    height: 287px;
-  }
-
   &__element {
     display: flex;
+    justify-content: space-between;
     opacity: 0;
-    width: 331px;
-    height: 73px;
+    height: 70px;
     background-color: white;
     margin: 10px 0px;
-    align-items: center;
+    box-shadow: 1px 1px 5px 1px #00000046;
+
     border-radius: 20px;
     overflow: hidden;
 
@@ -53,25 +67,31 @@
       font-weight: 700;
       white-space: nowrap;
       text-overflow: ellipsis;
+      overflow: hidden;
     }
     &__subtitle {
       margin-top: 5px;
       font-weight: 300;
       white-space: nowrap;
       text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &__content {
       padding: 15px;
-      display: flex;
-      justify-content: space-between;
+
       width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     &__text {
+      width: 100%;
     }
     &__price {
-      font-weight: 500;
+      font-weight: 700;
+      margin: 10px 15px;
       margin-top: auto;
     }
   }
@@ -85,6 +105,13 @@
         $i}s
         cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
+  }
+
+  &__button {
+    @include global-button;
+    padding: 15px 55px;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
 }
 
@@ -120,6 +147,9 @@
     &:checked ~ .confirmation__container:last-child div {
       animation: checked-icon-rotation 0.5s forwards;
     }
+    &:checked ~ .confirmation__container:last-child i {
+      font-size: 25px;
+    }
   }
 
   &__container {
@@ -129,7 +159,7 @@
     background-color: #99e2d0;
 
     &-icon__icon {
-      font-size: 25px;
+      font-size: 0px;
     }
   }
 }
