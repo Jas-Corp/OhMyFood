@@ -1,5 +1,15 @@
 .header {
-    @extend %flex-center;
-    padding: 10px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  justify-content: space-around;
+
+  &__arrow {
+    @include flex-center;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
 }
-  
