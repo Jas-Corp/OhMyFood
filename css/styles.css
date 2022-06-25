@@ -93,11 +93,13 @@ a {
   color: inherit;
 }
 
-.logo, .menu__name {
+.logo,
+.menu__name {
   font-family: "Shrikhand", sans-serif;
 }
 
-main, .localisation {
+main,
+.localisation {
   font-family: "Roboto", sans-serif;
 }
 
@@ -177,6 +179,53 @@ main, .localisation {
   width: 20px;
 }
 
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 251, 251, 0.2941176471);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  animation: loader 1s 3.5s forwards;
+}
+.loader__text {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 60px;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 rgb(0, 0, 0), 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 #fff;
+  transform: translateX(-1600px);
+}
+.loader__text--1 {
+  color: #9356dc;
+  animation: text-appearing 1s 1s forwards, text-disappearing 1s 3s forwards;
+}
+.loader__text--2 {
+  color: #99e2d0;
+  animation: text-appearing 1s 0.5s forwards, text-disappearing 1s 2.5s forwards;
+}
+.loader__text--3 {
+  color: #ff79da;
+  animation: text-appearing 1s forwards, text-disappearing 1s 2s forwards;
+}
+
+@keyframes text-appearing {
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes text-disappearing {
+  100% {
+    transform: translateX(1660px);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 .localisation {
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 7px 0px #d8dede;

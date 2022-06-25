@@ -4,9 +4,11 @@
 //Shrikhand
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
-.logo, .menu__name {
+.logo,
+.menu__name {
   font-family: $font-title;
 }
-main, .localisation {
+main,
+.localisation {
   font-family: $font-text;
 }
