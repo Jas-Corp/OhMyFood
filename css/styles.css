@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.content-list__cards, .userguide__content i, .userguide__stape, .localisation {
+.content-list__cards, .userguide__content i, .userguide__stape, .localisation, .loader {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,9 +196,6 @@ main,
   position: fixed;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(255, 251, 251, 0.2941176471);
   backdrop-filter: blur(5px);
   z-index: 1;
@@ -427,7 +424,7 @@ main,
   font-weight: 800;
   margin-bottom: 3px;
 }
-.card__content__heart::before {
+.card__content__heart {
   font-size: 25px;
   font-weight: 500;
   transition: 0.2s;
@@ -470,9 +467,6 @@ main,
   margin-right: auto;
   margin-left: auto;
 }
-.menu__entrees, .menu__plats, .menu__deserts {
-  width: 100%;
-}
 .menu__img {
   max-height: 400px;
   width: 100%;
@@ -483,6 +477,23 @@ main,
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+.menu__heart {
+  font-size: 25px;
+  font-weight: 500;
+  transition: 0.2s;
+  color: transparent;
+  animation: heart-stroke-appearing 0.5s forwards;
+  transition: 1s ease-in;
+}
+.menu__heart:hover::before {
+  animation: heart-background-fill 0.5s forwards;
+  font-weight: bold;
+  background: linear-gradient(360deg, #ff79da, #9356dc, #ffffff);
+  background-size: 200% 200%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: 0.2s;
 }
 .menu__categorie {
   display: flex;
@@ -498,6 +509,9 @@ main,
   height: 3px;
   margin-top: 5px;
   background-color: #99e2d0;
+}
+.menu__entrees, .menu__plats, .menu__deserts {
+  width: 100%;
 }
 .menu__element:nth-child(1) {
   animation: menu-content-spawn 1s forwards 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);

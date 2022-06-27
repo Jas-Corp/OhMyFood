@@ -11,22 +11,21 @@
   margin-right: auto;
   margin-left: auto;
 
-  &__entrees,
-  &__plats,
-  &__deserts {
-    width: 100%;
-  }
-
   &__img {
     max-height: 400px;
     width: 100%;
     object-fit: cover;
   }
+
   &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+  }
+
+  &__heart {
+    @include global-heart;
   }
 
   &__categorie {
@@ -46,6 +45,12 @@
     }
   }
 
+  &__entrees,
+  &__plats,
+  &__deserts {
+    width: 100%;
+  }
+
   // ELEMENT ANIMATION
   @for $i from 1 to 5 {
     &__element:nth-child(#{$i}) {
@@ -57,7 +62,8 @@
         cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
-
+  
+  // PLAT DU MENU
   &__element {
     display: flex;
     opacity: 0;
@@ -185,4 +191,3 @@
     display: none;
   }
 }
-

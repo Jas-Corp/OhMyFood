@@ -1,13 +1,10 @@
-// LOCALISATION
-
+// LOADER
 .loader {
-  
+  @extend %flex-center;
   position: fixed;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   background-color: #fffbfb4b;
   backdrop-filter: blur(5px);
   z-index: 1;
@@ -55,6 +52,7 @@
   }
 }
 
+// LOCALISATION
 .localisation {
   @extend %flex-center;
   background-color: #eaeaea;
@@ -125,6 +123,7 @@
       }
     }
 
+    // AJOUT DE LA PASTILLE AVEC LE NUMERO
     @for $i from 1 to 4 {
       &:nth-child(#{$i})::before {
         content: "#{$i}";
@@ -160,6 +159,7 @@
   }
 }
 
+// LISTE DES RESTAURANTS
 .content-list {
   &__title {
     margin-top: 30px;
@@ -225,22 +225,8 @@
       margin-bottom: 3px;
     }
 
-    &__heart::before {
-      font-size: 25px;
-      font-weight: 500;
-      transition: 0.2s;
-      color: transparent;
-      animation: heart-stroke-appearing 0.5s forwards;
-      transition: 1s ease-in;
-    }
-    &__heart:hover::before {
-      animation: heart-background-fill 0.5s forwards;
-      font-weight: bold;
-      background: linear-gradient(360deg, #ff79da, #9356dc, #ffffff);
-      background-size: 200% 200%;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      transition: 0.2s;
+    &__heart {
+      @include global-heart;
     }
   }
 }
