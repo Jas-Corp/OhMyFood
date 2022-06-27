@@ -1,0 +1,78 @@
+// ANIMATIONS DU LOADER
+@keyframes text-appearing {
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes text-disappearing {
+  100% {
+    transform: translateX(1660px);
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+// ANIMATION DU COEUR
+@keyframes heart-background-fill {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes heart-stroke-appearing {
+  100% {
+    font-weight: 500;
+    color: black;
+  }
+}
+
+// ANIMATION DES PLATS DU MENU
+@keyframes menu-content-spawn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+// ANIMATIONS QUAND ON AJOUTE UN PRODUIT DU MENU
+@keyframes checked-appearing {
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes checked-icon-rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes checked-disappearing {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 0px;
+    display: none;
+  }
+}

@@ -1,12 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.content-list__cards, .userguide__content i, .userguide__stape, .localisation, .loader {
+@keyframes text-appearing {
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes text-disappearing {
+  100% {
+    transform: translateX(1660px);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes heart-background-fill {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes heart-stroke-appearing {
+  100% {
+    font-weight: 500;
+    color: black;
+  }
+}
+@keyframes menu-content-spawn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  80% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+@keyframes checked-appearing {
+  to {
+    width: 60px;
+  }
+}
+@keyframes checked-icon-rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes checked-disappearing {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 0px;
+    display: none;
+  }
+}
+.content-list__cards,
+.userguide__content i,
+.userguide__stape,
+.localisation,
+.loader {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.menu, .presentation {
+.menu,
+.presentation {
   display: flex;
   flex-direction: column;
 }
@@ -148,6 +221,36 @@ main,
   color: white;
 }
 
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 251, 251, 0.2941176471);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  animation: loader 1s 3.5s forwards;
+}
+.loader__text {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 60px;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 rgb(0, 0, 0), 0 2px 0 #fff, 0 -2px 0 #fff,
+    1px 1px #fff, -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+    -1px 1px 0 #fff;
+  transform: translateX(-1600px);
+}
+.loader__text--1 {
+  color: #9356dc;
+  animation: text-appearing 1s 1s forwards, text-disappearing 1s 3s forwards;
+}
+.loader__text--2 {
+  color: #99e2d0;
+  animation: text-appearing 1s 0.5s forwards, text-disappearing 1s 2.5s forwards;
+}
+.loader__text--3 {
+  color: #ff79da;
+  animation: text-appearing 1s forwards, text-disappearing 1s 2s forwards;
+}
+
 .header {
   position: relative;
   text-align: center;
@@ -192,50 +295,6 @@ main,
   width: 20px;
 }
 
-.loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 251, 251, 0.2941176471);
-  backdrop-filter: blur(5px);
-  z-index: 1;
-  animation: loader 1s 3.5s forwards;
-}
-.loader__text {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 60px;
-  text-shadow: 2px 0 0 #fff, -2px 0 0 rgb(0, 0, 0), 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 #fff;
-  transform: translateX(-1600px);
-}
-.loader__text--1 {
-  color: #9356dc;
-  animation: text-appearing 1s 1s forwards, text-disappearing 1s 3s forwards;
-}
-.loader__text--2 {
-  color: #99e2d0;
-  animation: text-appearing 1s 0.5s forwards, text-disappearing 1s 2.5s forwards;
-}
-.loader__text--3 {
-  color: #ff79da;
-  animation: text-appearing 1s forwards, text-disappearing 1s 2s forwards;
-}
-
-@keyframes text-appearing {
-  100% {
-    transform: translateX(0px);
-  }
-}
-@keyframes text-disappearing {
-  100% {
-    transform: translateX(1660px);
-  }
-}
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
 .localisation {
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 7px 0px #d8dede;
@@ -442,20 +501,6 @@ main,
   transition: 0.2s;
 }
 
-@keyframes heart-background-fill {
-  0% {
-    background-position: 100% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-@keyframes heart-stroke-appearing {
-  100% {
-    font-weight: 500;
-    color: black;
-  }
-}
 .menu {
   position: relative;
   align-items: center;
@@ -510,20 +555,26 @@ main,
   margin-top: 5px;
   background-color: #99e2d0;
 }
-.menu__entrees, .menu__plats, .menu__deserts {
+.menu__entrees,
+.menu__plats,
+.menu__deserts {
   width: 100%;
 }
 .menu__element:nth-child(1) {
-  animation: menu-content-spawn 1s forwards 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: menu-content-spawn 1s forwards 0.2s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .menu__element:nth-child(2) {
-  animation: menu-content-spawn 1s forwards 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: menu-content-spawn 1s forwards 0.4s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .menu__element:nth-child(3) {
-  animation: menu-content-spawn 1s forwards 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: menu-content-spawn 1s forwards 0.6s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .menu__element:nth-child(4) {
-  animation: menu-content-spawn 1s forwards 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: menu-content-spawn 1s forwards 0.8s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .menu__element {
   display: flex;
@@ -534,9 +585,10 @@ main,
   box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.1176470588);
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 .menu__element__label {
-  position: fixed;
+  position: absolute;
   display: inline;
   width: 100%;
   height: 100%;
@@ -585,22 +637,6 @@ main,
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2745098039);
 }
 
-@keyframes menu-content-spawn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  80% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-}
 .confirmation__checkbox {
   display: none;
 }
@@ -626,29 +662,6 @@ main,
 }
 .confirmation__container-icon__icon {
   font-size: 0px;
-}
-
-@keyframes checked-appearing {
-  to {
-    width: 60px;
-  }
-}
-@keyframes checked-icon-rotation {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes checked-disappearing {
-  from {
-    width: 60px;
-  }
-  to {
-    width: 0px;
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

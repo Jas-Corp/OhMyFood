@@ -1,0 +1,35 @@
+// LOADER
+.loader {
+  @extend %flex-center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background-color: #fffbfb4b;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  animation: loader 1s 3.5s forwards;
+
+  &__text {
+    font-family: $font-title;
+    font-size: 60px;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 rgb(0, 0, 0), 0 2px 0 #fff,
+      0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 rgb(0, 0, 0),
+      1px -1px 0 rgb(0, 0, 0), -1px 1px 0 #fff;
+    transform: translateX(-1600px);
+
+    &--1 {
+      color: $priamire;
+      animation: text-appearing 1s 1s forwards, text-disappearing 1s 3s forwards;
+    }
+    &--2 {
+      color: $tertiaire;
+      animation: text-appearing 1s 0.5s forwards,
+        text-disappearing 1s 2.5s forwards;
+    }
+    &--3 {
+      color: $secondaire;
+      animation: text-appearing 1s forwards, text-disappearing 1s 2s forwards;
+    }
+  }
+}

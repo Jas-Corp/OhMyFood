@@ -46,39 +46,4 @@
   }
 }
 
-//BOUTTON
-@mixin global-button {
-  border-radius: 90px;
-  border: none;
-  color: white;
-  font-weight: 700;
 
-  background-image: $gradient;
-  padding: 15px;
-  box-shadow: 1px 1px 10px 1px #00000046;
-  transition: 0.3s;
-
-  &:hover {
-    filter: brightness(110%);
-
-    box-shadow: 5px 5px 10px 2px #00000046;
-  }
-}
-@mixin global-heart {
-  font-size: 25px;
-  font-weight: 500;
-  transition: 0.2s;
-  color: transparent;
-  animation: heart-stroke-appearing 0.5s forwards;
-  transition: 1s ease-in;
-
-  &:hover::before {
-    animation: heart-background-fill 0.5s forwards;
-    font-weight: bold;
-    background: linear-gradient(360deg, #ff79da, #9356dc, #ffffff);
-    background-size: 200% 200%;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    transition: 0.2s;
-  }
-}
