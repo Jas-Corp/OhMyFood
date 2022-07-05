@@ -5,7 +5,7 @@
 
 **OhMyFood** is a fake project developed in **HTML** and **SASS** for the **openclassroom training course.**
 
-It is an **online meal ordering company.** Users can compose **their own menu** and **reduce their waiting time** in restaurants because their menu is prepared in advance.
+It is an **online meal ordering company.** Users can compose **their own menu** and **reduce their waiting time** in restaurants because their menu are prepared in advance.
 
 <hr>
 
